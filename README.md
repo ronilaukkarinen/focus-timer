@@ -5,10 +5,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Swift-6.2-orange?style=for-the-badge&logo=swift&logoColor=white" alt="Swift" />
-  <img src="https://img.shields.io/badge/SwiftUI-purple?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI" />
-  <img src="https://img.shields.io/badge/macOS-13+-black?style=for-the-badge&logo=apple&logoColor=white" alt="macOS" />
-  <img src="https://img.shields.io/badge/Claude_Code-black?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code" />
+  <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift" />
+  <img src="https://img.shields.io/badge/SwiftUI-007AFF?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI" />
+  <img src="https://img.shields.io/badge/Claude_Code-cc785c?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code" />
 </p>
 
 ---
