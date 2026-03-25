@@ -12,7 +12,7 @@
 
 ---
 
-<img width="769" height="323" alt="image" src="https://github.com/user-attachments/assets/ed383911-4573-42e9-ad0a-2f1fd47f6fbd" />
+<img width="878" height="291" alt="image" src="https://github.com/user-attachments/assets/fe575a52-f226-4257-9689-c7b80f595c1e" />
 
 ## What is Focus Timer?
 
