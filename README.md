@@ -124,7 +124,3 @@ The bell sound is a tibetan singing bowl converted from the [focus](https://gith
 - macOS 13 (Ventura) or later
 - Swift 5.9+ (for building from source)
 
-## Credits
-
-- Bell sound from [focus](https://github.com/ayoisaiah/focus) by Ayooluwa Isaiah
-- Inspired by the flow timer concept in focus and [Sunsama](https://sunsama.com)
