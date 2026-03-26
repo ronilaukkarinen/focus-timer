@@ -92,7 +92,7 @@ class FlowTimerState: ObservableObject {
         let m = (elapsedSeconds % 3600) / 60
         let s = elapsedSeconds % 60
         if h > 0 {
-            return String(format: "%dh %02d:%02d", h, m, s)
+            return String(format: "%d:%02d:%02d", h, m, s)
         }
         return String(format: "%02d:%02d", m, s)
     }
@@ -239,6 +239,7 @@ struct FlowTimerView: View {
 
     var dimTextColor: Color {
         if state.isPaused { return .white.opacity(0.2) }
+        if state.isOvertime { return Color(red: 1.0, green: 0.4, blue: 0.4).opacity(0.7) }
         return .white.opacity(0.4)
     }
 
