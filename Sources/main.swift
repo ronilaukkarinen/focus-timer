@@ -88,15 +88,22 @@ class FlowTimerState: ObservableObject {
     var isOvertime: Bool { elapsedSeconds > estimatedSeconds }
 
     var elapsedString: String {
-        let m = elapsedSeconds / 60
+        let h = elapsedSeconds / 3600
+        let m = (elapsedSeconds % 3600) / 60
         let s = elapsedSeconds % 60
+        if h > 0 {
+            return String(format: "%dh %02d:%02d", h, m, s)
+        }
         return String(format: "%02d:%02d", m, s)
     }
 
     var estimatedString: String {
-        let m = estimatedSeconds / 60
-        let s = estimatedSeconds % 60
-        return String(format: "%02d:%02d", m, s)
+        let h = estimatedSeconds / 3600
+        let m = (estimatedSeconds % 3600) / 60
+        if h > 0 {
+            return m > 0 ? "\(h)h \(m)min" : "\(h)h"
+        }
+        return "\(m)min"
     }
 
     var percentageString: String {
@@ -278,15 +285,14 @@ struct FlowTimerView: View {
 
                         HStack(spacing: 4) {
                             Text(state.percentageString)
-                                .frame(width: 36, alignment: .trailing)
                             Text("\u{00B7}")
                                 .foregroundColor(.white.opacity(0.25))
                             Text(state.estimatedString)
-                                .frame(width: 40, alignment: .leading)
                         }
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(dimTextColor)
                         .monospacedDigit()
+                        .fixedSize()
                     }
 
                     // Full width progress bar
@@ -365,8 +371,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         if let screen = NSScreen.main {
             let screenFrame = screen.visibleFrame
-            let x = screenFrame.maxX - window.frame.width - 20
-            let y = screenFrame.maxY - window.frame.height - 20
+            let x = screenFrame.midX - window.frame.width / 2
+            let y = screenFrame.midY - window.frame.height / 2
             window.setFrameOrigin(NSPoint(x: x, y: y))
         }
 
